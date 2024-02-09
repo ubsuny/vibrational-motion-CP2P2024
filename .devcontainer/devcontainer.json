@@ -1,0 +1,12 @@
+{
+    "image": "python:3.9",
+    "dockerComposeFile": "docker-compose.yml",
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    }
+}
