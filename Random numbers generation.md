@@ -11,6 +11,22 @@ This random shuffling ensures that the data points are randomly distributed betw
 ### Randomness while taking snapshot of the video.
 As I am studying vibrations of the protein, we determined the conformation of the protein by minimizing the potential energy. At room temperature, although being in its stable position, the protein starts waggling and shows many different configurations. We aim to generate the matrix for each of the configurations within a specific frequency range. So the configurational structure of the protein was chosen randomly during the waggling motion of the protein. The structure was randomly snapped from the video and the matrix for each of those structure needs to be calculated from which we can illustrate the correlation of frequency and other proteins character.
 
+```python
+import numpy as np
+
+# Total number of snapshots or protein structures in the video
+total_snapshots = 1000
+
+# Number of snapshots to select randomly
+num_selected_snapshots = 900
+
+# Generate random indices representing the selected snapshots
+random_indices = np.random.randint(0, total_snapshots, size=num_selected_snapshots)
+
+# Print the randomly selected indices for illustration
+print("Randomly selected indices:", random_indices)
+```
+
 
     
    
