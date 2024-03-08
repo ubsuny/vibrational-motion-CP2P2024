@@ -80,7 +80,8 @@ plt.grid(True)
 plt.show()
 
 ```
-![Nature of Randomness]()
+![Nature of Randomness](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/random%20snapshot.png)
+There is no discernible pattern in the distribution of points. The points are scattered randomly across the plot without any apparent trend. This ensures that the analysis based on the selected snapshots is not biased towards specific configurations of the protein.
 
 
 
