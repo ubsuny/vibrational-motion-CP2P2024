@@ -45,6 +45,8 @@ plt.show()
 
 ```
 
+![Nature of Randomness]()
+
 
 
 ### Randomness while taking snapshot of the video.
