@@ -44,7 +44,9 @@ plt.show()
 
 ```
 
-![Nature of Randomness](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/random%20scatter.png) The plot shows the random shuffling of the indices. The x-axis represents the indices of the eigen vectors, and the y-axis represents the shuffled values of these indices.
+![Nature of Randomness](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/random%20scatter.png) 
+
+The plot shows the random shuffling of the indices. The x-axis represents the indices of the eigen vectors, and the y-axis represents the shuffled values of these indices.
 
 
 
@@ -78,7 +80,7 @@ plt.grid(True)
 plt.show()
 
 ```
-
+![Nature of Randomness]()
 
 
 
