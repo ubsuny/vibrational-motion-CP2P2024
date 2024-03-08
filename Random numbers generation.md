@@ -1,11 +1,10 @@
 # Random Numbers in My Project
 
-My project is to determine the frequency dependence of the average root mean squared displacements of the waters in the calculations of the vibrations of the hydrated proteins. In my data set, I have the frequencies in the columns and eigenvectors associated with the frequencies in the rows. So I need to find the RMSD from the given data points. I am using machine learning for the findings. So I will be generating training and testing data sets randomly. I will train 80% of the data set and the rest 20% data will be tested using the train_test_split function from sklearn.model_selection.
-
+My project is to determine the frequency dependence of the average root mean squared displacements of the waters in the calculations of the vibrations of the hydrated proteins. In my data set, I have the frequencies in the columns and eigenvectors associated with the frequencies in the rows. So I need to find the RMSD from the given data points. I am using machine learning for the findings. So I will be generating training and testing data sets randomly.
 
 ### Randomness in Data Splitting:
 
-When splitting the data into training and testing sets (or for cross-validation), the train_test_split function from sklearn.model_selection randomly shuffles the data before splitting.
+When splitting the data into training and testing sets, the train_test_split function from sklearn.model_selection randomly shuffles the data before splitting.
 This random shuffling ensures that the data points are randomly distributed between the training and testing sets, reducing the risk of introducing biases in the model evaluation process.
 ```python
 import numpy as np
@@ -45,7 +44,7 @@ plt.show()
 
 ```
 
-![Nature of Randomness](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/random%20scatter.png) The plot shows the random shuffling of the indices. The x-axis represents the indices of the eigen vectors, and the y-axis represents the shuffled values of these indices
+![Nature of Randomness](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/random%20scatter.png) The plot shows the random shuffling of the indices. The x-axis represents the indices of the eigen vectors, and the y-axis represents the shuffled values of these indices.
 
 
 
@@ -56,7 +55,7 @@ As I am studying vibrations of the protein, we determined the conformation of th
 import numpy as np
 
 # Total number of snapshots or protein structures in the video
-total_snapshots = 1000
+total_snapshots = 10000
 
 # Number of snapshots to select randomly
 num_selected_snapshots = 900
@@ -66,7 +65,21 @@ random_indices = np.random.randint(0, total_snapshots, size=num_selected_snapsho
 
 # Print the randomly selected indices for illustration
 print("Randomly selected indices:", random_indices)
+
+x_coordinates = np.arange(num_selected_snapshots)
+
+# Plot the randomly selected indices
+plt.figure(figsize=(8, 6))
+plt.scatter(x_coordinates, random_indices, marker='o', s=10)
+plt.title('Randomly Selected Indices')
+plt.xlabel('Snapshot')
+plt.ylabel('Index')
+plt.grid(True)
+plt.show()
+
 ```
+
+
 
 
     
