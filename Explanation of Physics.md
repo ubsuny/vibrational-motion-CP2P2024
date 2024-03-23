@@ -17,7 +17,7 @@ refine the best approach for simulating the physical system.
 
 So for the further refinement, I am studying vibrations of the protein. we determined the conformation of the protein by minimizing the potential energy. At room temperature, although being in its stable position, the protein starts waggling and shows many different configurations. We aim to generate the matrix for each of the configurations within a specific frequency range and correlate the displacement vector with the frequency. So the configurational structure of the protein was chosen randomly during the waggling motion of the protein. The structure was randomly snapped from the video and the matrix for each of those structure needs to be calculated from which we can illustrate the correlation between frequency and eigen vectors.
 So I have right now 10 replica structures. Those replica structures are selected randomly during the waggling of the protein. Within each replica structures, there are 90 starting structures i.e altogether there are 900 starting structures.
-So now, I have calculated the matrices for each of the starting structures for each frequency band.
+So now, I have calculated the matrices for each of the starting structures for each frequency band and averaged the matrix for each frequency range. After the average the correlation plot was obtained.
 
 | Peaks | Frequency | Chosen Frequency Range |
 | -------- | -------- | -------- |
