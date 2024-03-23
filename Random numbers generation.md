@@ -1,7 +1,6 @@
 # Random Numbers in My Project
 
-My project is to determine the frequency dependence of the average root mean squared displacements of the waters in the calculations of the vibrations of the hydrated proteins. In my data set, I have the frequencies in the columns and eigenvectors associated with the frequencies in the rows. So I need to find the RMSD from the given data points. I am using machine learning for the findings. So I will be generating training and testing data sets randomly.
-
+My project is to determine the frequency dependence of the average root mean squared displacements of the waters in the calculations of the vibrations of the hydrated proteins. In my data set, I have the frequencies in the columns and eigenvectors associated with the frequencies in the rows. So I need to find the correlation between the displacement vectors and the frequencies.
 ### Randomness in Data Splitting:
 
 When splitting the data into training and testing sets, the train_test_split function from sklearn.model_selection randomly shuffles the data before splitting.
