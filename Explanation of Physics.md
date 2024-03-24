@@ -118,6 +118,8 @@ np.savetxt(prefix + '_avg.asc', avg)
 ```
 
 
+![Alt text](https://example.com/path/to/image.jpg)
+
 
 
 
