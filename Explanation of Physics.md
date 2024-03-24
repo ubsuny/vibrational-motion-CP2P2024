@@ -26,6 +26,98 @@ So now, I have calculated the matrices for each of the starting structures for e
 | C | 51.4 | 50.4-52.4 |
 |D  | 67 | 66-68 |
 
+```p
+import numpy as np
+fi1 = open("frame_s.asc",'r')
+lines1 = fi1.readlines()
+band_low = 0.66   ##### set lower boundary
+band_up = 0.68  #### set upper #boundary
+nol_low = -1   #### find the line in input which represents the lower bdr
+nol_up = -1   ###                                               upper bdr
+for i in range(len(lines1)):
+    line = lines1[i]      
+    freq_cur = line.split()[0]
+    freq_cur = float(freq_cur)
+    if (freq_cur > band_low) and (nol_low == -1):
+        nol_low = i       
+    if (freq_cur > band_up) and (nol_up == -1):
+        nol_up = i - 1    
+        break             
+print(nol_low)            
+print(nol_up) 
+a=np.load("frame_U.npz")
+Mat=a['arr_0']
+#Mat = np.loadtxt("frame_U.asc")
+disp = []                 
+for i in range(nol_up-nol_low+1):
+    disp.append([])       
+pdb = open("deleted.pdb", 'r')
+pdblines = pdb.readlines()
+for line in pdblines:     
+    words = str.split(line)
+    if len(words) < 1:    
+        pass
+    elif words[0] == "ATOM":
+        atomname = line[13:16].strip()
+        if atomname == "CA":
+            resid = line[22:26].strip()
+            atomnumber = line[5:11].strip()
+            for j in range(nol_up - nol_low + 1):
+                disp[j].append([Mat[int(atomnumber) * 3 -3, j + nol_low], Mat[int(atomnumber) * 3 - 2, j + nol_low], Mat[int(atomnumber) * 3 - 1, j + nol_low]])
+corre = np.zeros((nol_up-nol_low+1, len(disp[0]), len(disp[0])))
+for i in range(nol_up-nol_low+1):
+    for j in range(len(disp[0])):
+        for k in range(len(disp[0])):
+            corre[i, j, k] = np.dot(disp[i][j],disp[i][k])
+np.save("correlation_66to68.npy",corre)
+```
+```p
+#!/bin/env python
+
+import sys
+import numpy as np
+import math
+
+#use_standard_error = True
+
+#def matrixToSplot(fname, A, factor=15.0):
+#    (m, n) = A.shape
+#    fout = open(fname, 'w')
+#    for j in range(m):
+#        frequency = A[j][0]
+#        for i in range(1, n):
+#            line = "%f\t%f\t%f\n" % ( ((i-1)*factor), frequency, A[j][i])
+#            fout.write(line)
+#        fout.write('\n')
+#    fout.close()
+
+
+
+
+prefix = sys.argv[1]
+filenames = open(sys.argv[2],'r')
+lines = filenames.readlines()
+matrices = []
+
+for filename in lines:
+    A = np.load(filename[:-1])
+    avg = np.mean(A, axis = 0)
+    matrices.append(avg)
+
+avg = np.mean(matrices, axis=0)
+#std = np.std(matrices, axis=0)
+#if use_standard_error:
+#    std /= math.sqrt(len(matrices))
+#std[:,0] = avg[:,0]
+#avg = avg/np.amax(avg)
+np.savetxt(prefix + '_avg.asc', avg)
+#matrixToSplot(prefix + '_avg_plot.asc', avg)
+
+#np.savetxt(prefix + '_std.asc', std)
+#matrixToSplot(prefix + '_std_plot.asc', std)
+```
+
+
 
 
 
