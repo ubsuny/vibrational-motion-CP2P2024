@@ -1,9 +1,9 @@
 
 # Explanation of Physics
 
-The protein dynamics studied in this work were performed on the enzymatic protein lysozyme, specifically the variety found in chicken egg whites (CEWL). A single protein can have several different configurations: unfolded, folded, and partially folded. Many proteins have rigid structures, and deviate only in small fluctuations from the natural folded structure, while others can undergo large conformational changes due to binding, charge transfer, or the surrounding environment. These fluctuations and conformational changes have been shown to be functionally relevant.
+The protein dynamics studied in this work were performed on the enzymatic protein lysozyme, specifically the variety found in chicken egg whites (CEWL). A single protein can have several different configurations: unfolded, folded, and partially folded. Many proteins have rigid structures, and deviate only in small fluctuations from the natural folded structure, while others can undergo large conformational changes due to binding, charge transfer, or the surrounding environment. These fluctuations and conformational changes have been shown to be functionally relevant [^1].
 
-The most probable structure of protein is frequently the most energetically favorable, i.e. the lowest energy. A protein’s structure is able to fluctuate. It is not as rigidly defined as a crystal object, allowing for both large and small fluctuations relative to the protein size. When proteins are frozen, the thermal energy is much lower which will cause the the protein to move toward one of the energy minima. However, at non-zero temperatures, the protein can still move in the energy landscape. This results in an ensemble of possible folded states, the distribution of which varies for each type of protein.
+The most probable structure of protein is frequently the most energetically favorable, i.e. the lowest energy. A protein’s structure is able to fluctuate. It is not as rigidly defined as a crystal object, allowing for both large and small fluctuations relative to the protein size. When proteins are frozen, the thermal energy is much lower which will cause the the protein to move toward one of the energy minima. However, at non-zero temperatures, the protein can still move in the energy landscape. This results in an ensemble of possible folded states, the distribution of which varies for each type of protein [^2].
 
 ![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/Screenshot%20(98).png)
 
@@ -24,7 +24,7 @@ information from each set of NMA results separately, such as vibrational density
 
 ### Vibrational Motions of protein and relation to function:
 When all of the atoms in the system move in a correlated fashion at a specific vibrational frequency, the motions are referred to as vibrational modes. In a physical system at non-zero temperatures, the protein motion is a superposition of vibrational modes and local vibrations. One such example of the relation of protein motions and function is through binding. Many proteins undergo conformational changes upon binding. Two major models have been proposed for the binding of a protein and substrate (which could be a
-ligand, small molecule, or another protein): 1) the induced fit model and 2) conformational selection model. The induced fit model describes a process in which the protein conformation is fixed until the substrate causes a change in the protein structure through interactions to facilitate binding. The conformational selection model describes a system in which the protein moves in dynamic equilibrium, whose conformations include both the free and bound structures, the substrate will bind to and stabilize the preferred conformation.
+ligand, small molecule, or another protein): 1) the induced fit model and 2) conformational selection model. The induced fit model describes a process in which the protein conformation is fixed until the substrate causes a change in the protein structure through interactions to facilitate binding. The conformational selection model describes a system in which the protein moves in dynamic equilibrium, whose conformations include both the free and bound structures, the substrate will bind to and stabilize the preferred conformation [^3].
 
 ## Necessity of this study:
 
@@ -158,6 +158,13 @@ np.savetxt(prefix + '_avg.asc', avg)
 ![Plot for peak 3](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2050.4%20to%2052.4.png)
 
 ![Plot for peak 4](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2066%20to%2068.png)
+
+
+
+### References:
+[^1] Uversky VN. Under-folded proteins: Conformational ensembles and their roles in protein folding, function, and pathogenesis. Biopolymers. 2013 Nov;99(11):870-87. doi: 10.1002/bip.22298. PMID: 23754493; PMCID: PMC7161862.
+[^2] https://www.ncbi.nlm.nih.gov/books/NBK26830/
+[^3] Silva DA, Bowman GR, Sosa-Peinado A, Huang X. A role for both conformational selection and induced fit in ligand binding by the LAO protein. PLoS Comput Biol. 2011 May;7(5):e1002054. doi: 10.1371/journal.pcbi.1002054. Epub 2011 May 26. PMID: 21637799; PMCID: PMC3102756.
 
 
 #  Also need to do the same calculation for the result of principal component analysis. May be there I can use machine learning.
