@@ -1,16 +1,14 @@
 
 # Explanation of Physics
 
-The protein dynamics studied in this work were performed on the enzymatic
-protein lysozyme, specifically the variety found in chicken egg whites (CEWL). A single protein can have several different configurations: unfolded, folded, and partially folded. Many proteins have rigid structures, and deviate only in small fluctuations from the natural folded structure, while others can undergo large conformational changes due to binding, charge transfer, or the surrounding environment. These fluctuations and conformational changes have been shown to be functionally relevant.
+The protein dynamics studied in this work were performed on the enzymatic protein lysozyme, specifically the variety found in chicken egg whites (CEWL). A single protein can have several different configurations: unfolded, folded, and partially folded. Many proteins have rigid structures, and deviate only in small fluctuations from the natural folded structure, while others can undergo large conformational changes due to binding, charge transfer, or the surrounding environment. These fluctuations and conformational changes have been shown to be functionally relevant.
 
-The most probable structure of protein is frequently the most energetically favorable, i.e. the lowest energy. A protein’s structure is able to fluctuate. It is not as rigidly defined as a crystal object, allowing for both large and small fluctuations relative to the protein size. When proteins are frozen, the thermal energy is much lower which will cause the the protein to move toward one of the energy minina. However,at non-zero temperatures, the protein can still move in the energy landscape.This results in an ensemble of possible folded states, the distribution of which varies for each type of protein.
+The most probable structure of protein is frequently the most energetically favorable, i.e. the lowest energy. A protein’s structure is able to fluctuate. It is not as rigidly defined as a crystal object, allowing for both large and small fluctuations relative to the protein size. When proteins are frozen, the thermal energy is much lower which will cause the the protein to move toward one of the energy minima. However, at non-zero temperatures, the protein can still move in the energy landscape. This results in an ensemble of possible folded states, the distribution of which varies for each type of protein.
 
 ![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/Screenshot%20(98).png)
 
 
-If the energy landscape is known, one can use it to calculate protein vibrations. In normal mode analysis (NMA) the protein vibrations are approximated to be harmonic around the protein’s energy minimized structure. This
-approximation can be useful in obtaining some of the protein vibrational motions, however, the harmonic approximation will not include the anharmonic contributions.
+If the energy landscape is known, one can use it to calculate protein vibrations. In normal mode analysis (NMA) the protein vibrations are approximated to be harmonic around the protein’s energy minimized structure. This approximation can be useful in obtaining some of the protein vibrational motions, however, the harmonic approximation will not include the anharmonic contributions.
 
 
 
@@ -25,22 +23,14 @@ In order to account for this variation in the protein configurations within the 
 information from each set of NMA results separately, such as vibrational density of states, isotropic absorbance, and anisotropic absorbance (the calculations of which are described in later sections). The individual calculated spectra are then averaged to provide the ensemble results.
 
 ### Vibrational Motions of protein and relation to function:
-When all of the atoms in the system
-move in a correlated fashion at a specific vibrational frequency, the motions are
-referred to as vibrational modes. In a physical system at non-zero temperatures,
-the protein motion is a superposition of vibrational modes and local vibrations. One such example of the relation of protein motions and function is through
-binding. Many proteins undergo conformational changes upon binding. Two major models
-have been proposed for the binding of a protein and substrate (which could be a
-ligand, small molecule, or another protein): 1) the induced fit model and 2) conformational selection model. The induced fit model describes a process in which
-the protein conformation is fixed until the substrate causes a change in the protein structure through interactions to facilitate binding. The conformational selection model describes a system in which the protein moves in dynamic equilibrium, whose conformations include both the free and bound structures, the
-substrate will bind to and stabilize the preferred conformation.
+When all of the atoms in the system move in a correlated fashion at a specific vibrational frequency, the motions are referred to as vibrational modes. In a physical system at non-zero temperatures, the protein motion is a superposition of vibrational modes and local vibrations. One such example of the relation of protein motions and function is through binding. Many proteins undergo conformational changes upon binding. Two major models have been proposed for the binding of a protein and substrate (which could be a
+ligand, small molecule, or another protein): 1) the induced fit model and 2) conformational selection model. The induced fit model describes a process in which the protein conformation is fixed until the substrate causes a change in the protein structure through interactions to facilitate binding. The conformational selection model describes a system in which the protein moves in dynamic equilibrium, whose conformations include both the free and bound structures, the substrate will bind to and stabilize the preferred conformation.
 
 ## Necessity of this study:
 
 ![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/Screenshot%20(99).png)
 
-Figure shows a comparison of the results obtained for free WT CEWL.The QHA and NMA was performed after MD simulation. The NMA was performed  with the inclusion of the neutralizing ions and 7 A water layer. The VDOS in Figshows that the ˚VDOS is slightly higher for the QHA results below 20 cm−1. Above 20 cm−1 the VDOS is much higher for the NMA calculated modes, which peaks around 70 cm−1. The QHA consistently provides lower frequency modes than the NMA results.The trend of the VDOS spectrum is opposite for the isotropic absorbance
-spectra. It can be seen that the dipole derivative magnitude fluctuates for each mode, however, the average magnitude is higher for the QHA modes. The shape of the isotropic absorbance spectrum from QHA is different than those calculated using NMA. The isotropic absorbance from the QHA peaks around 6 cm−1 and gradually decreases with increasing frequency,whereas for the NMA results the spectrum gradually increases until around 60 cm−1 then levels off. 
+Figure shows a comparison of the results obtained for free WT CEWL. The QHA and NMA was performed after MD simulation. The NMA was performed  with the inclusion of the neutralizing ions and 7 A water layer. The VDOS in Fig shows that the ˚VDOS is slightly higher for the QHA results below 20 cm<sup>-1</sup>. Above 20 cm<sup>-1</sup> the VDOS is much higher for the NMA calculated modes, which peaks around 70 cm<sup>-1</sup>. The QHA consistently provides lower frequency modes than the NMA results. The trend of the VDOS spectrum is opposite for the isotropic absorbance spectra. It can be seen that the dipole derivative magnitude fluctuates for each mode, however, the average magnitude is higher for the QHA modes. The shape of the isotropic absorbance spectrum from QHA is different than those calculated using NMA. The isotropic absorbance from the QHA peaks around 6 cm<sup>-1</sup> and gradually decreases with increasing frequency, whereas for the NMA results the spectrum gradually increases until around 60 cm<sup>-1</sup> then levels off. 
 
 While the MD simulation used to determine the QHA modes contains solvent, only the protein motions are considered when performing the calculation. However, NMA includes the motions of the solvent in the calculation. Therefore for all calculated modes, the solvent around the protein moves in concert with the protein motion. This may lead to a double counting of some protein motions in which the solvent moves differently for different modes while the protein motion may be similar, or perhaps some vibrations are missed due to this effect. In the sample, the biological water, the water within a few layers of the protein surface, will likely move with the protein, but outside of this region, the bulk water will display a standard relaxation response. Also, the large amount of solvent around the protein has a large impact on the dipole derivative magnitude for the NMA. These will therefore
 impact the VDOS and isotropic absorbance and that's why should be studied further to
@@ -49,17 +39,18 @@ refine the best approach for simulating the physical system.
 
 ## Methods of the study:
 
-So for the further refinement, I am studying vibrations of the protein. we determined the conformation of the protein by minimizing the potential energy. At room temperature, although being in its stable position, the protein starts waggling and shows many different configurations. We aim to generate the matrix for each of the configurations within a specific frequency range and correlate the displacement vector with the frequency. So the configurational structure of the protein was chosen randomly during the waggling motion of the protein. The structure was randomly snapped from the video and the matrix for each of those structure needs to be calculated from which we can illustrate the correlation between frequency and eigen vectors.
-So I have right now 10 replica structures. Those replica structures are selected randomly during the waggling of the protein. Within each replica structures, there are 90 starting structures i.e altogether there are 900 starting structures.
+So for the further refinement, I am studying vibrations of the protein. we determined the conformation of the protein by minimizing the potential energy. At room temperature, although being in its stable position, the protein starts waggling and shows many different configurations. The configurational structure of the protein was chosen randomly during the waggling motion of the protein. The structure was randomly snapped from the video and the matrix for each of those structure needs to be calculated from which we can illustrate the correlation between frequency and eigen vectors. We aim to generate the matrix for each of the configurations within a specific frequency range and correlate the displacement vector with the frequency.
+
+So I have right now 10 replica structures. Those replica structures are selected randomly during the waggling of the protein. Within each replica structures, there are 90 starting structures i.e altogether there are 900 starting structures (900 modes).
 The absorbtion vs frequency graph of the CEWL protein after NMEA is given below:
 
 ![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/four%20peaks.png)
 
-we are going to analyze the correlated motions for the full data set within a given
-specific frequency band of interest. Here we will
-determine the regions of motion associated with the resonance most
-strongly effected by the hydration
-So now, I have calculated the matrices for each of the starting structures for each frequency band and averaged the matrix for each frequency range. After the average the correlation plot will obtained.
+we are going to analyze the correlated motions for the full data set within a given specific frequency band of interest. Here we will
+determine the regions of motion associated with the resonance most strongly effected by the hydration
+So now, I have calculated the matrices for each of the starting structures for each frequency band and averaged the matrix for each frequency range by using below mentioned code. After the average the correlation plot was obtained (plot is at the end).
+
+DISCUSSION OF THE RESULTS TO BE CONTINUED.
 
 | Peaks | Frequency | Chosen Frequency Range |
 | -------- | -------- | -------- |
@@ -169,7 +160,7 @@ np.savetxt(prefix + '_avg.asc', avg)
 ![Plot for peak 4](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2066%20to%2068.png)
 
 
-# Disscussion of the graph not done yet. Also need to do the same calculation using principal component analysis.
+#  Also need to do the same calculation for the result of principal component analysis.
 
 
 
