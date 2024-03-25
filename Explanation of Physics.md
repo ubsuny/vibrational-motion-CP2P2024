@@ -21,7 +21,7 @@ So for the further refinement, I am studying vibrations of the protein. we deter
 So I have right now 10 replica structures. Those replica structures are selected randomly during the waggling of the protein. Within each replica structures, there are 90 starting structures i.e altogether there are 900 starting structures.
 The absorbtion vs frequency graph of the CEWL protein after NMEA is given below:
 
-![Absorption Vs Frequency Graph ](Screenshot(97).png)
+![Absorption Vs Frequency Graph](Screenshot(97).png)
 
 we are going to analyze the correlated motions for the full data set within a given
 specific frequency band of interest. Here we will
