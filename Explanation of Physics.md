@@ -128,10 +128,10 @@ np.savetxt(prefix + '_avg.asc', avg)
 ```
 
 
-![Plot for peak 1](https://example.com/path/to/image.jpg)
-![Plot for peak 2](https://example.com/path/to/image.jpg)
-![Plot for peak 3](https://example.com/path/to/image.jpg)
-![Plot for peak 4](https://example.com/path/to/image.jpg)
+![Plot for peak 1](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20frequency%20range%204to5.png)
+![Plot for peak 2](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20frequency%20range%2022.5%20to%2024.5.png)
+![Plot for peak 3](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2050.4%20to%2052.4.png)
+![Plot for peak 4](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2066%20to%2068.png)
 
 
 
