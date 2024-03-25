@@ -162,9 +162,9 @@ np.savetxt(prefix + '_avg.asc', avg)
 
 
 ### References:
-[^1] Uversky VN. Under-folded proteins: Conformational ensembles and their roles in protein folding, function, and pathogenesis. Biopolymers. 2013 Nov;99(11):870-87. doi: 10.1002/bip.22298. PMID: 23754493; PMCID: PMC7161862.
-[^2] https://www.ncbi.nlm.nih.gov/books/NBK26830/
-[^3] Silva DA, Bowman GR, Sosa-Peinado A, Huang X. A role for both conformational selection and induced fit in ligand binding by the LAO protein. PLoS Comput Biol. 2011 May;7(5):e1002054. doi: 10.1371/journal.pcbi.1002054. Epub 2011 May 26. PMID: 21637799; PMCID: PMC3102756.
+[^1]: [Uversky VN. Under-folded proteins: Conformational ensembles and their roles in protein folding, function, and pathogenesis. Biopolymers. 2013 Nov;99(11):870-87. doi: 10.1002/bip.22298. PMID: 23754493; PMCID: PMC7161862.]
+[^2]:[ https://www.ncbi.nlm.nih.gov/books/NBK26830/]
+[^3]: [Silva DA, Bowman GR, Sosa-Peinado A, Huang X. A role for both conformational selection and induced fit in ligand binding by the LAO protein. PLoS Comput Biol. 2011 May;7(5):e1002054. doi: 10.1371/journal.pcbi.1002054. Epub 2011 May 26. PMID: 21637799; PMCID: PMC3102756.]
 
 
 #  Also need to do the same calculation for the result of principal component analysis. May be there I can use machine learning.
