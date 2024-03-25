@@ -167,7 +167,11 @@ np.savetxt(prefix + '_avg.asc', avg)
 [^3]: [Silva DA, Bowman GR, Sosa-Peinado A, Huang X. A role for both conformational selection and induced fit in ligand binding by the LAO protein. PLoS Comput Biol. 2011 May;7(5):e1002054. doi: 10.1371/journal.pcbi.1002054. Epub 2011 May 26. PMID: 21637799; PMCID: PMC3102756.]
 
 
-#  Also need to do the same calculation for the result of principal component analysis. May be there I can use machine learning.
+
+
+
+
+####  Also need to do the same calculation for the result of principal component analysis. May be there I can use machine learning.
 
 
 
