@@ -21,7 +21,7 @@ So for the further refinement, I am studying vibrations of the protein. we deter
 So I have right now 10 replica structures. Those replica structures are selected randomly during the waggling of the protein. Within each replica structures, there are 90 starting structures i.e altogether there are 900 starting structures.
 The absorbtion vs frequency graph of the CEWL protein after NMEA is given below:
 
-![Absorption Vs Frequency Graph](four peaks.png)
+![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/four%20peaks.png)
 
 we are going to analyze the correlated motions for the full data set within a given
 specific frequency band of interest. Here we will
@@ -128,7 +128,10 @@ np.savetxt(prefix + '_avg.asc', avg)
 ```
 
 
-![Alt text](https://example.com/path/to/image.jpg)
+![Plot for peak 1](https://example.com/path/to/image.jpg)
+![Plot for peak 2](https://example.com/path/to/image.jpg)
+![Plot for peak 3](https://example.com/path/to/image.jpg)
+![Plot for peak 4](https://example.com/path/to/image.jpg)
 
 
 
