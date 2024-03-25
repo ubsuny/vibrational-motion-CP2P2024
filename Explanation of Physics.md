@@ -137,7 +137,7 @@ np.savetxt(prefix + '_avg.asc', avg)
 ![Plot for peak 4](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2066%20to%2068.png)
 
 
-
+# Disscussion of the graph not done yet. Also need to do the same calculation using principal component analysis.
 
 
 
