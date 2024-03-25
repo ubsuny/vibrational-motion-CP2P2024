@@ -171,8 +171,6 @@ np.savetxt(prefix + '_avg.asc', avg)
 
 
 
-####  Also need to do the same calculation for the result of principal component analysis. May be there I can use machine learning.
-
 
 
 
