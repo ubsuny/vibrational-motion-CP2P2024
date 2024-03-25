@@ -1,16 +1,48 @@
 
 # Explanation of Physics
 
+The protein dynamics studied in this work were performed on the enzymatic
+protein lysozyme, specifically the variety found in chicken egg whites (CEWL). A single protein can have several different configurations: unfolded, folded, and partially folded. Many proteins have rigid structures, and deviate only in small fluctuations from the natural folded structure, while others can undergo large conformational changes due to binding, charge transfer, or the surrounding environment. These fluctuations and conformational changes have been shown to be functionally relevant.
+
 The most probable structure of protein is frequently the most energetically favorable, i.e. the lowest energy. A protein’s structure is able to fluctuate. It is not as rigidly defined as a crystal object, allowing for both large and small fluctuations relative to the protein size. When proteins are frozen, the thermal energy is much lower which will cause the the protein to move toward one of the energy minina. However,at non-zero temperatures, the protein can still move in the energy landscape.This results in an ensemble of possible folded states, the distribution of which varies for each type of protein.
 
+![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/Screenshot%20(98).png)
+
+
+If the energy landscape is known, one can use it to calculate protein vibrations. In normal mode analysis (NMA) the protein vibrations are approximated to be harmonic around the protein’s energy minimized structure. This
+approximation can be useful in obtaining some of the protein vibrational motions, however, the harmonic approximation will not include the anharmonic contributions.
+
+
+
+
 ### Normal Mode Analysis
-Normal mode analysis (NMA) is a computational technique widely employed in structural biology, computational chemistry, and materials science to investigate the vibrational motions and dynamics of molecules and molecular complexes. This method is rooted in the harmonic approximation, which posits that the potential energy surface governing atomic motion around their equilibrium positions is parabolic. NMA involves calculating the normal modes of a system, which represent the collective vibrational motions. Each normal mode is characterized by its frequency and associated vibrational pattern, depicting how atoms move relative to each other. These modes are determined by diagonalizing the mass-weighted Hessian matrix of the system, with the eigenvalues representing the squared frequencies and the eigenvectors describing the atomic displacements. In applications, NMA proves invaluable: in structural biology, it elucidates protein dynamics, including conformational changes and flexibility; in computational chemistry, it predicts vibrational spectra and analyzes molecular dynamics. 
+Normal mode analysis (NMA) is a computational technique widely employed in structural biology, computational chemistry, and materials science to investigate the vibrational motions and dynamics of molecules and molecular complexes. NMA involves calculating the normal modes of a system, which represent the collective vibrational motions. Each normal mode is characterized by its frequency and associated vibrational pattern, depicting how atoms move relative to each other. In applications, NMA proves invaluable: in structural biology, it elucidates protein dynamics, including conformational changes and flexibility; in computational chemistry, it predicts vibrational spectra and analyzes molecular dynamics. 
 
+### Normal Mode Ensemble Analysis
+The NMA method is most appropriate for modeling frozen samples, in which the structure is fairly ridged. At higher temperature the protein structure may occupy multiple conformations or move between structures due to the thermal energy. Each of these different structures each potentially have a different set of vibrational modes, due to the varying structures. Since the measurements  were performed at room temperature, and the samples contain a large concentration of proteins, it is necessary to include multiple protein conformations in the calculations. 
 
-The NMA method is most appropriate for modeling frozen samples, in which the structure is fairly ridged. At higher temperature the protein structure may occupy multiple conformations or move between structures due to the thermal energy. Each of these different structures each potentially have a different set of vibrational modes, due to the varying structures. Since the measurements  were performed at room temperature, and the samples contain a large concentration of proteins, it is necessary to include multiple protein conformations in the calculations. Normal mode analysis  performed on each minimized structure to obtain the vibrational mode frequencies, displacement vectors, and dipole derivative vectors. The eigenvectors indicate the atomic displacement of each atom in the molecule throughout the mode’s motion. The dipole derivative is related to the net displacement of the charge during the motion.
+In order to account for this variation in the protein configurations within the sample and the resulting impact on potential vibrations, we introduce Normal Mode Ensemble Analysis (NMEA). In this method, multiple protein structures from the same MD simulation are obtained and each is minimized to the same average energy gradient tolerance. Normal mode analysis is performed on each minimized structure to obtain the vibrational mode frequencies, displacement vectors, and dipole derivative vectors. These are used to calculate the desired
+information from each set of NMA results separately, such as vibrational density of states, isotropic absorbance, and anisotropic absorbance (the calculations of which are described in later sections). The individual calculated spectra are then averaged to provide the ensemble results.
+
+### Vibrational Motions of protein and relation to function:
+When all of the atoms in the system
+move in a correlated fashion at a specific vibrational frequency, the motions are
+referred to as vibrational modes. In a physical system at non-zero temperatures,
+the protein motion is a superposition of vibrational modes and local vibrations. One such example of the relation of protein motions and function is through
+binding. Many proteins undergo conformational changes upon binding. Two major models
+have been proposed for the binding of a protein and substrate (which could be a
+ligand, small molecule, or another protein): 1) the induced fit model and 2) conformational selection model. The induced fit model describes a process in which
+the protein conformation is fixed until the substrate causes a change in the protein structure through interactions to facilitate binding. The conformational selection model describes a system in which the protein moves in dynamic equilibrium, whose conformations include both the free and bound structures, the
+substrate will bind to and stabilize the preferred conformation.
 
 ## Necessity of this study:
-NMA includes the motions of the solvent in the calculation. Therefore for all calculated modes, the solvent around the protein moves in concert with the protein motion. This may lead to a double counting of some protein motions in which the solvent moves differently for different modes while the protein motion may be similar, or perhaps some vibrations are missed due to this effect. In the sample, the biological water, the water within a few layers of the protein surface, will likely move with the protein, but outside of this region, the bulk water will display a standard relaxation response. Also, the large amount of solvent around the protein has a large impact on the dipole derivative magnitude for the NMA. These will therefore
+
+![Absorption Vs Frequency Graph](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/Screenshot%20(99).png)
+
+Figure shows a comparison of the results obtained for free WT CEWL.The QHA and NMA was performed after MD simulation. The NMA was performed  with the inclusion of the neutralizing ions and 7 A water layer. The VDOS in Figshows that the ˚VDOS is slightly higher for the QHA results below 20 cm−1. Above 20 cm−1 the VDOS is much higher for the NMA calculated modes, which peaks around 70 cm−1. The QHA consistently provides lower frequency modes than the NMA results.The trend of the VDOS spectrum is opposite for the isotropic absorbance
+spectra. It can be seen that the dipole derivative magnitude fluctuates for each mode, however, the average magnitude is higher for the QHA modes. The shape of the isotropic absorbance spectrum from QHA is different than those calculated using NMA. The isotropic absorbance from the QHA peaks around 6 cm−1 and gradually decreases with increasing frequency,whereas for the NMA results the spectrum gradually increases until around 60 cm−1 then levels off. 
+
+While the MD simulation used to determine the QHA modes contains solvent, only the protein motions are considered when performing the calculation. However, NMA includes the motions of the solvent in the calculation. Therefore for all calculated modes, the solvent around the protein moves in concert with the protein motion. This may lead to a double counting of some protein motions in which the solvent moves differently for different modes while the protein motion may be similar, or perhaps some vibrations are missed due to this effect. In the sample, the biological water, the water within a few layers of the protein surface, will likely move with the protein, but outside of this region, the bulk water will display a standard relaxation response. Also, the large amount of solvent around the protein has a large impact on the dipole derivative magnitude for the NMA. These will therefore
 impact the VDOS and isotropic absorbance and that's why should be studied further to
 refine the best approach for simulating the physical system.
 
