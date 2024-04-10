@@ -19,8 +19,6 @@ for i, line in enumerate(lines1):
         nol_up = i - 1
         break
 
-print(nol_low)
-print(nol_up)
 
 # Load data using TensorFlow
 a = np.load("frame_U.npz")
@@ -92,9 +90,12 @@ np.save("correlation_4to5.npy", corre.numpy())
 - The saved correlation matrix can be further analyzed or visualized for insights into the dynamics of the system.
 
 
-### Result
+### Result 
+![Correlation plot for frequency range 4 to 5](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/plot4%20(1).png)
+
 
 
 ### Conclusion
 - The code demonstrates how TensorFlow can be integrated with other Python libraries, such as NumPy, for data processing and analysis tasks.
 - By leveraging TensorFlow's efficient tensor operations, complex computations, such as calculating correlations, can be performed effectively on large datasets.
+- The run time for the previous code was 12 minutes and for this code it is also the same. So there is no difference in execution time while using the tensorflow.
