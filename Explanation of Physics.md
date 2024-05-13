@@ -160,6 +160,8 @@ np.savetxt(prefix + '_avg.asc', avg)
 ![Plot for peak 4](https://github.com/ubsuny/vibrational-motion-CP2P2024/blob/main/average%20plot%20for%20the%20frequency%20range%2066%20to%2068.png)
 
 
+#### Documentation for final project whether the whole data set was analysed or not.
+The whole data set was studied. There are 10 replica structures and 90 starting structures in each replica structure: altogether 900 starting structures. The code was executed for every frame and the average was taken. Thanks to UB CCR which made the process more simpler than expected.
 
 ### References:
 [^1]: [Uversky VN. Under-folded proteins: Conformational ensembles and their roles in protein folding, function, and pathogenesis. Biopolymers. 2013 Nov;99(11):870-87. doi: 10.1002/bip.22298. PMID: 23754493; PMCID: PMC7161862.]
